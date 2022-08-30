@@ -19,9 +19,8 @@ const Cronometro = ({selecionado}:Props) => {
     return(
        <div className={style.cronometro}>
         <p className={style.titulo}> Escolha um card e inicie o cronômetro </p>
-        tempo:{tempo}
         <div className={style.relogioWrapper}>
-          <Relogio/>  
+          <Relogio tempo={tempo}/>  
         </div>
           <Botao texto="Iniciar"/>
        </div>
