@@ -15,15 +15,20 @@ const Item = ({
 } :Props)=> {
 
   return (
-    <li className={`${style.item} ${selecionado ? style.itemSelecionado: ''}`} onClick={()=> selecionaTarefa({
-        tarefa:tarefa,
-        tempo:tempo,
-        selecionado:selecionado,
-        completado:completado,
-        id:id
-    })}>
+    <li 
+      className={`${style.item} 
+      ${selecionado ? style.itemSelecionado: ''} 
+      ${completado ? style.itemCompletado:''} `} 
+      onClick={()=> selecionaTarefa({
+          tarefa:tarefa,
+          tempo:tempo,
+          selecionado:selecionado,
+          completado:completado,
+          id:id
+      })}>
       <h3>{tarefa}</h3>
-      <span>{tempo}</span> 
+      <span>{tempo}</span>
+      {completado && <span className={style.concluido} aria-label='tarefa concluída'/>}
     </li>
   )
 }
