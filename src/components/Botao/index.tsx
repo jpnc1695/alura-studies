@@ -1,9 +1,20 @@
 import style from './Botao.module.scss'
 
-const Botao = (props:{texto:string, tipo?:"button"| "submit" | "reset" | undefined,
-onClick?:()=> void}) => {
+interface Props {
+  texto:string,
+  tipo?:"button"| "submit" | "reset" | undefined,
+  onClick?:() => void
+}
+
+const Botao = ({texto, tipo, onClick}:Props) => {
   return(
-    <button onClick={props.onClick} type={props.tipo} className={style.botao}>{props.texto}</button>
+    <button 
+       onClick={onClick} 
+       type={tipo} 
+       className={style.botao}
+    >
+        {texto}
+    </button>
   )
 }
    
