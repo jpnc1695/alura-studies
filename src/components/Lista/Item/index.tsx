@@ -19,7 +19,7 @@ const Item = ({
       className={`${style.item} 
       ${selecionado ? style.itemSelecionado: ''} 
       ${completado ? style.itemCompletado:''} `} 
-      onClick={()=> selecionaTarefa({
+      onClick={()=> !completado && selecionaTarefa({
           tarefa:tarefa,
           tempo:tempo,
           selecionado:selecionado,
