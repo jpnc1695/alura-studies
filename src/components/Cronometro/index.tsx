@@ -29,11 +29,14 @@ const Cronometro = ({selecionado, finalizarTarefa}:Props) => {
 
     return(
        <div className={style.cronometro}>
-        <p className={style.titulo}> Escolha um card e inicie o cronômetro </p>
-        <div className={style.relogioWrapper}>
-          <Relogio tempo={tempo}/>  
-        </div>
-          <Botao texto="Iniciar" onClick={()=> regressiva(tempo)}/>
+         <p className={style.titulo}> Escolha um card e inicie o cronômetro </p>
+            <div className={style.relogioWrapper}>
+              <Relogio tempo={tempo}/>  
+            </div>
+            <div>
+              <Botao texto="Iniciar" onClick={()=> regressiva(tempo)}/>
+              <Botao texto="Parar" onClick={()=> regressiva(tempo)}/>
+            </div>
        </div>
     )
 }
