@@ -10,6 +10,7 @@ interface Props{
     finalizarTarefa:() => void
 }
 
+
 const Cronometro = ({selecionado, finalizarTarefa}:Props) => {
   const [tempo, setTempo] = useState<number>()
 
@@ -35,10 +36,11 @@ const Cronometro = ({selecionado, finalizarTarefa}:Props) => {
             </div>
             <div>
               <Botao texto="Iniciar" onClick={()=> regressiva(tempo)}/>
-              <Botao texto="Parar" onClick={()=> regressiva(tempo)}/>
             </div>
        </div>
     )
 }
 
 export default Cronometro
+
+
